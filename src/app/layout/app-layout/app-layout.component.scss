@@ -1,0 +1,119 @@
+.menu-container {
+  height: 100vh;
+
+  .menu-sidenav {
+    width: 250px;
+    background-color: #f5f5f5;
+
+    .sidenav-header {
+      padding: 16px;
+      background-color: #3f51b5;
+      color: white;
+      text-align: center;
+    }
+
+    .mat-nav-list {
+      padding-top: 0;
+
+      a.mat-list-item {
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #e0e0e0;
+        }
+
+        &.active {
+          background-color: #dcdcdc;
+          color: #3f51b5;
+          font-weight: 500;
+        }
+
+        mat-icon {
+          margin-right: 16px;
+          color: #3f51b5;
+        }
+      }
+
+      .logout-button {
+        margin-top: 8px;
+        color: #f44336;
+
+        mat-icon {
+          color: #f44336;
+        }
+      }
+    }
+  }
+
+  .mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    .menu-toggle-button {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: inline-flex;
+      }
+    }
+
+    .menu-logo {
+      font-weight: bold;
+      margin-left: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .spacer {
+      flex: 1 1 auto;
+    }
+
+    .menu-links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      a.mat-button {
+        &.active {
+          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 4px;
+        }
+      }
+
+      .logout-button-desktop {
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .content {
+    padding: 2rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  min-height: calc(100vh - 64px);
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
