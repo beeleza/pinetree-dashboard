@@ -2,7 +2,7 @@
   <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <h2>Login</h2>
 
-    <mat-form-field appearance="outline" class="full-width">
+    <!-- <mat-form-field appearance="outline" class="full-width">
       <mat-label>Email</mat-label>
       <input
         matInput
@@ -22,7 +22,7 @@
         required
         formControlName="password"
       />
-    </mat-form-field>
+    </mat-form-field> -->
 
     <button mat-raised-button color="primary" type="submit" class="full-width" [disabled]="!loginForm.valid">
       Entrar
